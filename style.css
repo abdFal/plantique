@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;500;700;800&family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap");
+
+body {
+  font-family: "Almarai", sans-serif;
+}
+
+/* Style the navigation bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  padding: 2px 30px 2px 30px;
+}
+.navigation {
+  display: flex;
+}
+.logo h3 {
+  font-size: 24px;
+  font-weight: 400;
+  color: #333;
+  letter-spacing: 2px;
+}
+
+.nav-item,
+.nav-itemsec {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item h4,
+.nav-itemsec h4 {
+  margin-right: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #242424;
+  cursor: pointer;
+  transition: 0.6s ease;
+  border: 1px solid rgb(186, 186, 186);
+  border-radius: 1rem;
+  padding: 5px 15px;
+}
+.nav-itemsec {
+  margin-right: 30px;
+  margin-left: 30px;
+}
+.nav-item h4:hover {
+  color: #333;
+  border: 1px solid #242424;
+}
+.language p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #777;
+  cursor: pointer;
+  margin-left: 1rem;
+  border-bottom: 1px solid grey;
+}
+
+/* .plantique */
+
+.plantique {
+  height: 80vh;
+  margin: 0 2rem;
+}
+.company {
+  margin: 11rem 0 0 0;
+}
+.company span {
+  border-right: 1px solid black;
+}
+.founder {
+  line-height: 0.5;
+}
+.plantique h1 {
+  font-weight: 700;
+  font-size: 6rem;
+  line-height: 0.3;
+  letter-spacing: 1px;
+}
+#clock {
+  font-weight: 300;
+  width: max-content;
+  position: relative;
+  right: -78rem;
+  top: -16rem;
+  border-bottom: 0.5px solid black;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .nav-item {
+    display: none;
+  }
+
+  .language {
+    display: none;
+  }
+
+  .logo h3 {
+    font-size: 20px;
+  }
+
+  nav {
+    justify-content: space-between;
+    padding: 15px;
+  }
+}
