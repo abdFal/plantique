@@ -1,8 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;500;700;800&family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap");
 
 body {
   font-family: "Almarai", sans-serif;
   margin: 0;
+}
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #202020;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #121212;
 }
 /* Style the navigation bar */
 nav {
@@ -73,6 +93,7 @@ nav {
   opacity: 0;
   animation: glicth 0.8s ease-in-out infinite;
 }
+
 @keyframes glicth {
   0% {
     opacity: 1;
@@ -105,17 +126,105 @@ nav {
 /* gallery */
 .gallery {
   border-radius: 15px;
+  margin-top: 8.6rem;
 }
-.thumbnail {
-  margin-top: 8.7rem;
-}
+
 .thumbnail img {
   box-sizing: border-box;
 }
+.setkontilapjang {
+  width: max-content;
+  margin: 0 auto -1rem auto;
+  letter-spacing: 1.3rem;
+  line-height: 1;
+}
+.setkontilapjang h5 {
+  font-weight: 300;
+}
+
+.desc {
+  font-size: 1.05rem;
+  width: 29%;
+  text-align: center;
+  margin: 7rem auto;
+  color: #686868;
+  font-weight: 400;
+  line-height: 1.4;
+}
 
 /* us */
-.us {
-  height: 80vh;
+.works {
+  padding: 1.6rem 1rem;
+}
+.works h1 {
+  font-family: "Ramabhadra";
+  width: max-content;
+  text-align: center;
+  margin: 0 auto;
+  letter-spacing: 1.7px;
+  padding-bottom: 0.8rem;
+  font-weight: 300;
+  font-size: 3.7rem;
+}
+.works-title span {
+  color: white;
+  padding: 0.8rem 0 0.8rem 1.8rem;
+  background-color: black;
+}
+.works-menu {
+  text-align: center;
+  margin-top: 2.2rem;
+}
+.line {
+  position: relative;
+}
+.line span {
+  position: absolute;
+  padding: 38rem 0 0 0;
+  border-left: 1px solid black;
+  top: -17rem;
+  right: 14rem;
+  z-index: -1;
+}
+
+.recent {
+  padding: 4rem 2rem 0 4.8rem;
+  font-weight: 600;
+}
+.projects {
+  display: flex;
+  width: max-content;
+  margin: 0 auto 8rem auto;
+}
+figure.snip1218 {
+  position: relative;
+  margin: 20px;
+  min-width: 220px;
+  max-width: 435px;
+  width: 100%;
+  background: transparent;
+  font-size: 13px;
+}
+figure.snip1218 img {
+  max-width: 100%;
+  border-radius: 3%;
+}
+
+figure.snip1218 figcaption {
+  padding: 15px 19px 0 19px;
+  background-color: #ffffff;
+}
+figure.snip1218 h3 {
+  margin: 0 0 5px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+figure.snip1218 h3 span {
+  font-weight: 800;
+}
+.project-type {
+  line-height: 1px;
+  font-size: 14px;
 }
 /* Responsive styles */
 @media screen and (max-width: 768px) {
