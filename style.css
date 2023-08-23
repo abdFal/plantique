@@ -2,8 +2,8 @@
 
 body {
   font-family: "Almarai", sans-serif;
+  margin: 0;
 }
-
 /* Style the navigation bar */
 nav {
   display: flex;
@@ -20,6 +20,7 @@ nav {
   font-weight: 400;
   color: #333;
   letter-spacing: 2px;
+  cursor: default;
 }
 
 .nav-item,
@@ -60,21 +61,35 @@ nav {
 /* .plantique */
 
 .plantique {
-  height: 80vh;
   margin: 0 2rem;
 }
 .company {
-  margin: 11rem 0 0 0;
+  margin: 12rem 0 0 0;
 }
+
 .company span {
   border-right: 1px solid black;
+  margin-left: 10px;
+  opacity: 0;
+  animation: glicth 0.8s ease-in-out infinite;
+}
+@keyframes glicth {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .founder {
   line-height: 0.5;
 }
 .plantique h1 {
   font-weight: 700;
-  font-size: 6rem;
+  font-size: 6.6rem;
   line-height: 0.3;
   letter-spacing: 1px;
 }
@@ -87,6 +102,21 @@ nav {
   border-bottom: 0.5px solid black;
 }
 
+/* gallery */
+.gallery {
+  border-radius: 15px;
+}
+.thumbnail {
+  margin-top: 8.7rem;
+}
+.thumbnail img {
+  box-sizing: border-box;
+}
+
+/* us */
+.us {
+  height: 80vh;
+}
 /* Responsive styles */
 @media screen and (max-width: 768px) {
   .nav-item {

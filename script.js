@@ -15,3 +15,12 @@ function checkTime(i) {
   } // add zero in front of numbers < 10
   return i;
 }
+
+var image = document.getElementsByClassName("image-main");
+new simpleParallax(image, {
+  orientation: "right",
+  transition: "cubic-bezier(0.1,0,0,0.3)",
+  delay: 0.6,
+  scale: 1.7,
+  customWrapper: ".thumbnail",
+});
