@@ -1,3 +1,10 @@
+// loading
+window.addEventListener("load", function () {
+  var preloader = document.querySelector(".center-body");
+  preloader.style.display = "none";
+});
+
+// clock
 function startTime() {
   const today = new Date();
   let h = today.getHours();
@@ -16,6 +23,7 @@ function checkTime(i) {
   return i;
 }
 
+// parallax
 var image = document.getElementsByClassName("image-main");
 new simpleParallax(image, {
   orientation: "left",

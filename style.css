@@ -1,30 +1,90 @@
 @import url("https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;500;700;800&family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap");
 
+/* Fonts and body */
 body {
   font-family: "Almarai", sans-serif;
   margin: 0;
 }
-/* scrollbar */
+
+@font-face {
+  font-family: w;
+  src: url(./font/PPMori-SemiBold.otf);
+}
+@font-face {
+  font-family: p;
+  src: url(./font/PPMori-Extralight.otf);
+}
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #202020;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #121212;
 }
-/* Style the navigation bar */
+
+/* Loader */
+.center-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #121212;
+}
+
+.loader-circle-103 {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  background-color: #fff;
+  border-radius: 50px;
+  z-index: 2;
+}
+
+.loader-circle-103::before,
+.loader-circle-103::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #121212;
+  animation: anm-CL-103-rotate 2s linear infinite;
+}
+
+.loader-circle-103::before {
+  bottom: 30px;
+  transform-origin: center bottom;
+  clip-path: circle(50% at 50% 100%);
+  z-index: 1;
+}
+
+.loader-circle-103::after {
+  top: 30px;
+  transform-origin: center top;
+  clip-path: circle(50% at 50% 0);
+  z-index: 1;
+}
+
+@keyframes anm-CL-103-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+/* Navigation bar */
 nav {
   display: flex;
   justify-content: space-between;
@@ -32,9 +92,11 @@ nav {
   background-color: transparent;
   padding: 2px 30px 2px 30px;
 }
+
 .navigation {
   display: flex;
 }
+
 .logo h3 {
   font-size: 24px;
   font-weight: 400;
@@ -61,14 +123,17 @@ nav {
   border-radius: 1rem;
   padding: 5px 15px;
 }
+
 .nav-itemsec {
   margin-right: 30px;
   margin-left: 30px;
 }
+
 .nav-item h4:hover {
   color: #333;
   border: 1px solid #242424;
 }
+
 .language p {
   font-size: 14px;
   font-weight: 400;
@@ -78,11 +143,11 @@ nav {
   border-bottom: 1px solid grey;
 }
 
-/* .plantique */
-
+/* Plantique section */
 .plantique {
-  margin: 0 2rem;
+  margin: 0 2rem 5rem 2rem;
 }
+
 .company {
   margin: 12rem 0 0 0;
 }
@@ -105,15 +170,19 @@ nav {
     opacity: 1;
   }
 }
+
 .founder {
   line-height: 0.5;
 }
+
 .plantique h1 {
+  font-family: "w";
   font-weight: 700;
   font-size: 6.6rem;
   line-height: 0.3;
-  letter-spacing: 1px;
+  letter-spacing: 0.7px;
 }
+
 #clock {
   font-weight: 300;
   width: max-content;
@@ -123,21 +192,24 @@ nav {
   border-bottom: 0.5px solid black;
 }
 
-/* gallery */
+/* Gallery section */
 .gallery {
   border-radius: 15px;
-  margin-top: 8.6rem;
+  margin-top: 10.2rem;
 }
 
 .thumbnail img {
-  box-sizing: border-box;
+  width: 100%;
+  height: auto;
 }
+
 .setkontilapjang {
   width: max-content;
   margin: 0 auto -1rem auto;
   letter-spacing: 1.3rem;
   line-height: 1;
 }
+
 .setkontilapjang h5 {
   font-weight: 300;
 }
@@ -152,87 +224,158 @@ nav {
   line-height: 1.4;
 }
 
-/* us */
+/* Us section */
 .works {
   padding: 1.6rem 1rem;
 }
+
 .works h1 {
-  font-family: "Ramabhadra";
+  font-family: "w";
   width: max-content;
   text-align: center;
   margin: 0 auto;
   letter-spacing: 1.7px;
-  padding-bottom: 0.8rem;
+  padding: 2rem 0 0 0;
   font-weight: 300;
-  font-size: 3.7rem;
+  font-size: 4.8rem;
 }
+
 .works-title span {
   color: white;
-  padding: 0.8rem 0 0.8rem 1.8rem;
+  padding: 1.7rem 0 1.7rem 1.8rem;
   background-color: black;
 }
+
 .works-menu {
-  text-align: center;
-  margin-top: 2.2rem;
+  width: max-content;
+  font-weight: 400;
+  margin: 2.9rem auto 0 auto;
 }
+
+.works-item {
+  display: table-cell;
+  position: relative;
+  padding: 15px 0;
+}
+
+.works-link {
+  color: #121212;
+  text-decoration: none;
+  letter-spacing: 0.25em;
+  display: inline-block;
+  padding: 15px 13px;
+  position: relative;
+}
+
+.works-link:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #121212;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.works-link:hover:after {
+  width: 100%;
+  left: 0;
+}
+
 .line {
   position: relative;
 }
+
 .line span {
   position: absolute;
-  padding: 38rem 0 0 0;
+  padding: 48rem 0 0 0;
   border-left: 1px solid black;
-  top: -17rem;
+  top: 2rem;
   right: 14rem;
   z-index: -1;
 }
 
 .recent {
-  padding: 4rem 2rem 0 4.8rem;
-  font-weight: 600;
+  padding: 6rem 2rem 0 2.4rem;
+  line-height: 1px;
+  font-weight: 400;
 }
+
 .projects {
   display: flex;
   width: max-content;
-  margin: 0 auto 8rem auto;
+  margin: -1rem auto 5rem auto;
 }
+
+.snip1218 img {
+  max-width: 100%;
+  height: 320px;
+  border-radius: 3%;
+  transition: 0.3s ease-in-out;
+}
+
+.snip1218:hover img {
+  transform: scale(1.06);
+}
+
 figure.snip1218 {
   position: relative;
   margin: 20px;
   min-width: 220px;
-  max-width: 435px;
+  max-width: 465px;
   width: 100%;
   background: transparent;
   font-size: 13px;
-}
-figure.snip1218 img {
-  max-width: 100%;
+  overflow: hidden;
   border-radius: 3%;
 }
 
 figure.snip1218 figcaption {
-  padding: 15px 19px 0 19px;
+  padding: 15px 10px 0 10px;
   background-color: #ffffff;
 }
+
 figure.snip1218 h3 {
   margin: 0 0 5px;
   text-transform: uppercase;
   font-weight: 400;
 }
+
 figure.snip1218 h3 span {
   font-weight: 800;
 }
+
 .project-type {
   line-height: 1px;
   font-size: 14px;
 }
+
+/* marquee */
+marquee {
+  font-family: p;
+  font-size: 12.7px;
+  color: #8c8c8c;
+  text-transform: uppercase;
+  margin: 2rem 0;
+}
+
+/* ppe */
+.ppe-list {
+  font-size: 3.6rem;
+  font-family: w;
+  margin: 4rem auto;
+  list-style: none;
+}
+.ppe-list li {
+  border-top: 1px solid #121212;
+  line-height: 34px;
+}
 /* Responsive styles */
 @media screen and (max-width: 768px) {
   .nav-item {
-    display: none;
-  }
-
-  .language {
     display: none;
   }
 
