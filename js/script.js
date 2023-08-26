@@ -25,10 +25,10 @@ function checkTime(i) {
 
 // parallax
 var image = document.getElementsByClassName("image-main");
-new simpleParallax(image, {
+var instance = new simpleParallax(image, {
   orientation: "left",
   transition: "cubic-bezier(0,0,0,0.5)",
   delay: 0.7,
-  scale: 1.9,
+  scale: 1.7,
   customWrapper: ".thumbnail",
 });
