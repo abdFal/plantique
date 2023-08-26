@@ -27,8 +27,11 @@ function checkTime(i) {
 var image = document.getElementsByClassName("image-main");
 var instance = new simpleParallax(image, {
   orientation: "left",
-  transition: "cubic-bezier(0,0,0,0.5)",
+  transition: "cubic-bezier(0,0,0,0.8)",
   delay: 0.7,
-  scale: 1.7,
+  scale: 1.69,
   customWrapper: ".thumbnail",
 });
+
+// var paper = document.getElementsByClassName("image-paper");
+// new simpleParallax(paper);
