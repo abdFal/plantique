@@ -398,6 +398,46 @@ marquee {
   margin-right: 2rem;
 }
 
+.ppe{
+  min-height: 90vh;
+  width: 95%;
+  position: relative;
+  z-index: 9;
+  margin: 0 2rem ;
+  text-transform: uppercase;
+  padding-top: 10rem
+}
+.ppe h3{
+  font-size: 4.1rem;
+  font-family: w;
+  list-style: none;
+  cursor: pointer;
+}
+.box{
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 150px;
+  padding: 0 1rem;
+  border-top: 2px solid #121212;
+}
+.box:nth-last-child(1){
+  border-bottom: 2px solid #121212;
+}
+.cursor{
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  position: fixed;
+  background-color: #121212;
+  z-index: 8;
+  transition: background-image ease 0.5s;
+  background-position: center;
+  background-size:cover ;
+  mix-blend-mode: difference;
+}
+
 /* paper */
 .paper {
   height: 100vh;
@@ -452,6 +492,8 @@ marquee {
 .about-btn i {
   margin-left: 1rem;
 }
+
+
 /* footer */
 .footer-section {
   height: 43vh;
@@ -477,6 +519,8 @@ marquee {
   line-height: 30px;
   color: #3d3d3d;
 }
+
+
 /* Responsive styles */
 @media screen and (max-width: 768px) {
   .nav-item {
