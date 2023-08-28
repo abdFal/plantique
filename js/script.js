@@ -60,10 +60,7 @@ boxes.forEach(function(elem){
 // new simpleParallax(paper);
 
 // ngilangin watermark
-window.onload = function() {
-  var shadowRoot = document.querySelector('spline-viewer').shadowRoot;
-  shadowRoot.querySelector('#logo').remove();
-}
+
 
 // parallax - thing
 var image = document.getElementsByClassName("image-thing-first");
