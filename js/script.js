@@ -58,3 +58,55 @@ boxes.forEach(function(elem){
 
 // var paper = document.getElementsByClassName("image-paper");
 // new simpleParallax(paper);
+
+// ngilangin watermark
+window.onload = function() {
+  var shadowRoot = document.querySelector('spline-viewer').shadowRoot;
+  shadowRoot.querySelector('#logo').remove();
+}
+
+// parallax - thing
+var image = document.getElementsByClassName("image-thing-first");
+new simpleParallax(image, {
+  orientation: "down",
+  transition: "cubic-bezier(0,0,0,0.5)",
+  delay: 0.2,
+  scale: 1.8,
+  customWrapper: ".thumbnail",
+});
+
+// ppe text
+const elements = document.querySelectorAll(".plant-header");
+let interval;
+
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+const handleMouseOver = event => {
+  let iteration = 0;
+
+  clearInterval(interval);
+
+  interval = setInterval(() => {
+    event.target.innerText = event.target.innerText
+      .split("")
+      .map((letter, index) => {
+        if (index < iteration) {
+          return event.target.dataset.value[index];
+        }
+
+        return letters[Math.floor(Math.random() * 26)];
+      })
+      .join("");
+
+    if (iteration >= event.target.dataset.value.length) {
+      clearInterval(interval);
+    }
+
+    iteration += 1 / 3;
+  }, 30);
+};
+
+elements.forEach(element => {
+  element.addEventListener("mouseover", handleMouseOver);
+});
+

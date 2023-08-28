@@ -161,6 +161,10 @@ nav {
   margin: 0 2rem 5rem 2rem;
 }
 
+.plant-header {
+  font-family: 'Space Mono', monospace;
+}
+
 .company {
   margin: 12rem 0 0 0;
 }
@@ -211,9 +215,27 @@ nav {
   margin-top: 10.2rem;
 }
 
+.thumbnail {
+  width: 95vw;
+  margin: 0 auto;
+}
+
 .thumbnail img {
+  
   width: 100%;
-  height: auto;
+  height: 80vh;
+  object-fit: cover;
+  filter:saturate(0%);
+
+}
+
+.spline {
+  position: absolute;
+  width: 50vw;
+  height: 50vh;
+  top: 0;
+  right: 0;
+  scale: 0.5;
 }
 
 .setkontilapjang {
@@ -323,10 +345,12 @@ nav {
   display: flex;
   width: max-content;
   margin: -1rem auto 5rem auto;
+  width: 95vw;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .snip1218 img {
-  max-width: 100%;
   height: 320px;
   border-radius: 3%;
   transition: 0.3s ease-in-out;
@@ -436,6 +460,36 @@ marquee {
   background-position: center;
   background-size:cover ;
   mix-blend-mode: difference;
+}
+
+/* thing */
+.thing-1 {
+  margin: 4rem 0;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+
+.thing-left {
+  width: 65vw;
+}
+
+.thing-image-left {
+  width: 50vw;
+  
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.thing-image-left img {
+  height: 110vh;
+  object-fit: cover;
+}
+
+.thing-text-right p {
+  width: 25vw;
+}
+.sub {
+  filter: opacity(50%);
 }
 
 /* paper */
