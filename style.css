@@ -163,6 +163,7 @@ nav {
 
 .plant-header {
   font-family: 'Space Mono', monospace;
+  width: max-content;
 }
 
 .company {
@@ -460,6 +461,7 @@ marquee {
   background-position: center;
   background-size:cover ;
   mix-blend-mode: difference;
+  pointer-events: none;
 }
 
 /* thing */

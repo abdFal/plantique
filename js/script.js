@@ -33,6 +33,7 @@ var instance = new simpleParallax(image, {
   customWrapper: ".thumbnail",
 });
 
+// cursor
 var crsr = document.querySelector(".cursor")
 document.addEventListener("mousemove",function(dets){
     crsr.style.left = dets.x + -5+"px"
