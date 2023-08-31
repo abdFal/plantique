@@ -60,18 +60,14 @@ boxes.forEach(function (elem) {
 // new simpleParallax(paper);
 
 // ngilangin watermark
-window.onload = function() {
-  var shadowRoot = document.querySelector('spline-viewer').shadowRoot;
-  shadowRoot.querySelector('#logo').remove();
-}
 
 // parallax - thing
 var image = document.getElementsByClassName("image-thing-first");
 new simpleParallax(image, {
   orientation: "down",
-  transition: "cubic-bezier(0,0,0,0.5)",
-  delay: 0.2,
-  scale: 1.8,
+  transition: "cubic-bezier(0,0,0,0.4)",
+  delay: 0.3,
+  scale: 1.99,
   customWrapper: ".thumbnail",
 });
 
@@ -81,7 +77,7 @@ let interval;
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-const handleMouseOver = event => {
+const handleMouseOver = (event) => {
   let iteration = 0;
 
   clearInterval(interval);
@@ -106,7 +102,6 @@ const handleMouseOver = event => {
   }, 30);
 };
 
-elements.forEach(element => {
+elements.forEach((element) => {
   element.addEventListener("mouseover", handleMouseOver);
 });
-
