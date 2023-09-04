@@ -564,6 +564,24 @@ marquee {
     --moz-column-count: 1;
   }
 }
+
+/* exhibition */
+.exhibition-paper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.exhibition-title h1 {
+  font-size: 4.8rem;
+  letter-spacing: 12px;
+  line-height: 1rem;
+  font-family: w;
+  text-align: center;
+}
+.exhibition-title p {
+  letter-spacing: 4px;
+  text-align: center;
+}
 /* paper */
 .paper {
   height: 100vh;
