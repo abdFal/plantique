@@ -22,6 +22,18 @@ boxes.forEach(function (elem) {
   });
 });
 
+// back to index
+
+function redirectToIndex() {
+  const whiteOverlay = document.getElementById("white-overlay");
+
+  whiteOverlay.style.opacity = "1";
+
+  setTimeout(function () {
+      window.location.href = "index.html";
+  }, 500);
+}
+
 // page transition
 
 function setupPageTransition() {
@@ -41,15 +53,3 @@ $(document).ready(function () {
         }, 1000);
     }
 });
-
-// back to index
-
-function redirectToIndex() {
-    const whiteOverlay = document.getElementById("white-overlay");
-  
-    whiteOverlay.style.opacity = "1";
-  
-    setTimeout(function () {
-        window.location.href = "index.html";
-    }, 500);
-}
