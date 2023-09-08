@@ -1,8 +1,3 @@
-// loading
-// $(window).on('load', function () {
-//   $('#loading').fadeToggle();
-// }) 
-
 // clock
 function startTime() {
   const today = new Date();
@@ -21,16 +16,6 @@ function checkTime(i) {
   }
   return i;
 }
-
-// parallax
-var image = document.getElementsByClassName("image-main");
-var instance = new simpleParallax(image, {
-  orientation: "left",
-  transition: "cubic-bezier(0,0,0,0.8)",
-  delay: 0.7,
-  scale: 1.69,
-  customWrapper: ".thumbnail",
-});
 
 // cursor
 var crsr = document.querySelector(".cursor");
@@ -56,19 +41,26 @@ boxes.forEach(function (elem) {
   });
 });
 
-// var paper = document.getElementsByClassName("image-paper");
-// new simpleParallax(paper);
+// thumbnail Parallax
+$(document).ready(function () {
+  $(window).scroll(function () {
+    var scroll = $(this).scrollTop();
+    $('.image-main').css({
+      transform: 'translateX(' + -scroll / 14 + 'px)',
+    });
+  });
+});
 
-// ngilangin watermark
+// thing Parallax
+$(document).ready(function () {
+  $(window).scroll(function () {
+    var scroll = $(this).scrollTop();
+    var slowScroll = scroll / 10;
 
-// parallax - thing
-var image = document.getElementsByClassName("image-thing-first");
-new simpleParallax(image, {
-  orientation: "down",
-  transition: "cubic-bezier(0,0,0,0.4)",
-  delay: 0.3,
-  scale: 1.99,
-  customWrapper: ".thumbnail",
+    $('.image-thing-first').css({
+      transform: 'translateY(' + slowScroll + 'px)',
+    });
+  });
 });
 
 // ppe text
