@@ -21,7 +21,7 @@ p::selection {
 
 html,
 body {
-  
+
   font-family: "Almarai", sans-serif;
   margin: 0;
   padding: 0;
@@ -260,7 +260,8 @@ nav {
 .thumbnail {
   position: relative;
   width: 100%;
-  height: 100vh; /* Adjust this value as needed */
+  height: 100vh;
+  /* Adjust this value as needed */
   overflow: hidden;
 }
 
@@ -466,9 +467,25 @@ marquee {
   align-items: left;
   margin-left: 30px;
   margin-top: 30px;
-  -webkit-transition: all 1s cubic-bezier(1, 0, 0, 1);
-  transition: all 1s cubic-bezier(1, 0, 0, 1);
+  -webkit-transition: all 600ms cubic-bezier(1, 0, 0, 1);
+  transition: all 600ms cubic-bezier(1, 0, 0, 1);
+  font-family: "w";
   /* cursor: pointer; */
+}
+
+.ppe-item-back i {
+  transform: scale(1);
+  -webkit-transition: all 600ms cubic-bezier(1, 0, 0, 1);
+  transition: all 600ms cubic-bezier(1, 0, 0, 1);
+}
+
+.ppe-item-back:hover i {
+  transform: scale(1.3);
+  letter-spacing: 0px;
+}
+
+.ppe-item-back:hover {
+  letter-spacing: 5px;
 }
 
 .ppe-list {
@@ -513,10 +530,7 @@ li {
   margin-left: 40px;
 }
 
-.ppe-item-back:hover {
-  letter-spacing: 10px;
-  margin-left: 60px;
-}
+
 .ppe-item:hover i {
   rotate: -45deg;
   scale: 1.2;
@@ -659,6 +673,48 @@ li {
   opacity: 1;
   transform: scale(1.3);
 }
+
+/* Projects */
+.projects-background img {
+  width: 100vw;
+  height: 100vh;
+  image-orientation: flip;
+  object-fit: cover;
+  position: absolute;
+}
+
+.projects-title {
+  font-family: p;
+  width: fit-content;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);top: 50%;
+  margin-left: 5%;
+  background-color: white;
+  padding: 1rem;
+}
+.projects-title h1{
+  margin: 0;
+  padding: 0;
+}
+
+.projects-back {
+  position: absolute;
+  height: 100%;
+  width: 3%;
+  background-color: white;
+}
+
+.projects-back .ppe-item-back {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: auto;
+}
+
 
 /* Responsive-ness for different screen-sizes */
 @media screen and (max-width: 810px) {
