@@ -89,6 +89,18 @@ function redirectToPattern() {
   }, 500);
 }
 
+// go to pattern
+
+function redirectToProjects() {
+  const whiteOverlay = document.getElementById("white-overlay");
+
+  whiteOverlay.style.opacity = "1";
+
+  setTimeout(function () {
+      window.location.href = "projects.html";
+  }, 500);
+}
+
 // go to exhibitions
 
 function redirectToExhibitions() {
