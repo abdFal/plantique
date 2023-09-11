@@ -201,6 +201,7 @@ nav {
 
 .plant-header {
   font-family: "Space Mono", monospace;
+  width: min-content;
 }
 
 .company {
