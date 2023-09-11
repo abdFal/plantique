@@ -706,6 +706,11 @@ li {
   background-color: white;
 }
 
+.projects-back h1{
+  transform: rotate(-90deg);
+  font-size: medium;
+}
+
 .projects-back .ppe-item-back {
   position: absolute;
   top: 50%;
