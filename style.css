@@ -21,6 +21,7 @@ p::selection {
 
 html,
 body {
+  scroll-behavior: smooth;
 
   font-family: "Almarai", sans-serif;
   margin: 0;
@@ -46,6 +47,21 @@ a {
 @font-face {
   font-family: p;
   src: url(./font/PPMori-Extralight.otf);
+}
+
+@font-face {
+  font-family: args;
+  src: url("https://db.onlinewebfonts.com/t/63acd86114af91146cb981f667373725.eot");
+  src: url("https://db.onlinewebfonts.com/t/63acd86114af91146cb981f667373725.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/63acd86114af91146cb981f667373725.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/63acd86114af91146cb981f667373725.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/63acd86114af91146cb981f667373725.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/63acd86114af91146cb981f667373725.svg#Arges Extra Bold")
+      format("svg");
 }
 
 /* Scrollbar */
@@ -526,11 +542,9 @@ li {
   transition: all 500ms cubic-bezier(1, 0, 0, 1);
 }
 
-
 .ppe-item:hover li {
   margin-left: 40px;
 }
-
 
 .ppe-item:hover i {
   rotate: -45deg;
@@ -690,12 +704,13 @@ li {
   position: absolute;
   top: 50%;
   -ms-transform: translateY(-50%);
-  transform: translateY(-50%);top: 50%;
+  transform: translateY(-50%);
+  top: 50%;
   margin-left: 5%;
   background-color: white;
   padding: 1rem;
 }
-.projects-title h1{
+.projects-title h1 {
   margin: 0;
   padding: 0;
 }
@@ -707,7 +722,7 @@ li {
   background-color: white;
 }
 
-.projects-back h1{
+.projects-back h1 {
   transform: rotate(-90deg);
   font-size: medium;
 }
@@ -720,7 +735,6 @@ li {
   transform: translate(-50%, -50%);
   margin: auto;
 }
-
 
 /* Responsive-ness for different screen-sizes */
 @media screen and (max-width: 810px) {
@@ -766,6 +780,19 @@ li {
   text-align: center;
 }
 
+/* tulisan */
+.tulisan {
+  height: 100vh;
+  background-color: #242424;
+}
+.tulisan h1 {
+  font-family: args;
+  font-size: 19rem;
+  text-align: justify;
+  line-height: 16.5rem;
+  margin: 0;
+  padding: 2rem 0;
+}
 /* paper */
 .paper {
   height: 100vh;
@@ -776,11 +803,12 @@ li {
   font-family: p;
   text-transform: uppercase;
   text-align: center;
-  font-size: 3.8rem;
-  padding: 6.5rem 5rem 0 5rem;
+  font-size: 3.3rem;
+  padding: 6.5rem 5.4rem 0 5rem;
   color: white;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 2.4px;
+  margin: 0;
 }
 
 .paper p {
@@ -802,13 +830,19 @@ li {
   margin: 0 auto;
   border-radius: 2%;
   box-sizing: border-box;
+  transition: all 0.9s ease;
+}
+.bg img:hover {
+  transform: scale(0.99);
 }
 
 .about-btn {
+  position: relative;
   display: flex;
   gap: 3px;
   align-items: center;
   justify-content: space-between;
+  width: max-content;
 }
 
 .about-btn a {
@@ -821,10 +855,16 @@ li {
   background-color: #ffffff;
   padding: 0.8rem 1.8rem;
   border-radius: 25px;
+  transition: all 0.9s ease;
 }
 
 .about-btn i {
   margin-left: 1rem;
+}
+.about-btn a:hover {
+  right: -1rem;
+  color: white;
+  background-color: black;
 }
 
 /* footer */

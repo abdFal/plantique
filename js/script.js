@@ -21,8 +21,8 @@ function checkTime(i) {
 $(document).ready(function () {
   $(window).scroll(function () {
     var scroll = $(this).scrollTop();
-    $('.image-main').css({
-      transform: 'translateX(' + -scroll / 14 + 'px)',
+    $(".image-main").css({
+      transform: "translateX(" + -scroll / 14 + "px)",
     });
   });
 });
@@ -33,8 +33,8 @@ $(document).ready(function () {
     var scroll = $(this).scrollTop();
     var slowScroll = scroll / 10;
 
-    $('.image-thing-first').css({
-      transform: 'translateY(' + slowScroll + 'px)',
+    $(".image-thing-first").css({
+      transform: "translateY(" + slowScroll + "px)",
     });
   });
 });
@@ -74,9 +74,6 @@ elements.forEach((element) => {
   element.addEventListener("mouseover", handleMouseOver);
 });
 
-
-
-
 // go to pattern
 
 function redirectToPattern() {
@@ -85,7 +82,7 @@ function redirectToPattern() {
   whiteOverlay.style.opacity = "1";
 
   setTimeout(function () {
-      window.location.href = "pattern.html";
+    window.location.href = "pattern.html";
   }, 500);
 }
 
@@ -97,7 +94,7 @@ function redirectToProjects() {
   whiteOverlay.style.opacity = "1";
 
   setTimeout(function () {
-      window.location.href = "projects.html";
+    window.location.href = "projects.html";
   }, 500);
 }
 
@@ -109,7 +106,19 @@ function redirectToExhibitions() {
   whiteOverlay.style.opacity = "1";
 
   setTimeout(function () {
-      window.location.href = "exhibitions.html";
+    window.location.href = "exhibitions.html";
+  }, 500);
+}
+
+// go to about
+
+function redirectToAbout() {
+  const whiteOverlay = document.getElementById("white-overlay");
+
+  whiteOverlay.style.opacity = "1";
+
+  setTimeout(function () {
+    window.location.href = "about.html";
   }, 500);
 }
 // page transition
@@ -123,11 +132,11 @@ $(document).ready(function () {
   setupPageTransition();
 
   $(window).on("load", function () {
-      const whiteOverlay = $("#white-overlay");
+    const whiteOverlay = $("#white-overlay");
 
-      setTimeout(function () {
-          whiteOverlay.css("opacity", "0");
-      }, 1000);
+    setTimeout(function () {
+      whiteOverlay.css("opacity", "0");
+    }, 1000);
   });
 });
 
