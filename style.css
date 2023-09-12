@@ -70,11 +70,12 @@ a {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0e001e;
+  background: #020005;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #202020;
+  background: #2a2a2a;
+  border-radius: 4rem;
 }
 
 ::-webkit-scrollbar-thumb:hover {
